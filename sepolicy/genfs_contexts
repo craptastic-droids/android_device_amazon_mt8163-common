@@ -1,0 +1,26 @@
+
+#genfscon proc /secmem0 u:object_r:proc_secmem:s0
+
+genfscon proc /driver/thermal u:object_r:proc_thermal:s0
+genfscon proc /mtkcooler u:object_r:proc_mtkcooler:s0
+genfscon proc /mtktz u:object_r:proc_mtktz:s0
+genfscon proc /lk_env u:object_r:proc_lk_env:s0
+genfscon proc /driver/storage_logger u:object_r:proc_slogger:s0
+genfscon proc /driver/icusb u:object_r:proc_icusb:s0
+
+genfscon iso9660 / u:object_r:iso9660:s0
+genfscon rawfs / u:object_r:rawfs:s0
+
+# Memtrack
+genfscon debugfs /mali0/gpu_memory u:object_r:debugfs_gpu_mali:s0
+genfscon debugfs /mali/gpu_memory u:object_r:debugfs_gpu_mali:s0
+genfscon debugfs /ion/ion_mm_heap u:object_r:debugfs_ion_mm_heap:s0
+genfscon debugfs /ion/heaps u:object_r:debugfs_ion_mm_heap:s0
+
+# Sensors
+genfscon sysfs /devices/virtual/misc/m_acc_misc/accactive   u:object_r:sysfs_acc_accactive:s0
+genfscon sysfs /devices/virtual/misc/m_alsps_misc/psactive  u:object_r:sysfs_alsps_psactive:s0
+genfscon sysfs /devices/virtual/misc/m_alsps_misc/alsactive u:object_r:sysfs_alsps_alsactive:s0
+
+# Headphones
+genfscon sysfs /devices/virtual/switch/h2w/state    u:object_r:sysfs_h2w_state:s0
